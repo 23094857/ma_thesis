@@ -1,0 +1,52 @@
+{
+  "builder_name": "math_dataset",
+  "citation": "\n@article{2019arXiv,\n  author = {Saxton, Grefenstette, Hill, Kohli},\n  title = {Analysing Mathematical Reasoning Abilities of Neural Models},\n  year = {2019},\n  journal = {arXiv:1904.01557}\n}\n",
+  "config_name": "algebra__linear_1d",
+  "dataset_name": "math_dataset",
+  "dataset_size": 111948712,
+  "description": "\nMathematics database.\n\nThis dataset code generates mathematical question and answer pairs,\nfrom a range of question types at roughly school-level difficulty.\nThis is designed to test the mathematical learning and algebraic\nreasoning skills of learning models.\n\nOriginal paper: Analysing Mathematical Reasoning Abilities of Neural Models\n(Saxton, Grefenstette, Hill, Kohli).\n\nExample usage:\ntrain_examples, val_examples = datasets.load_dataset(\n    'math_dataset/arithmetic__mul',\n    split=['train', 'test'],\n    as_supervised=True)\n",
+  "download_checksums": {
+    "https://storage.googleapis.com/mathematics-dataset/mathematics_dataset-v1.0.tar.gz": {
+      "num_bytes": 2333082954,
+      "checksum": null
+    }
+  },
+  "download_size": 2333082954,
+  "features": {
+    "question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "answer": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "https://github.com/deepmind/mathematics_dataset",
+  "license": "",
+  "size_in_bytes": 2445031666,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 111336065,
+      "num_examples": 1999998,
+      "dataset_name": "math_dataset"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 612647,
+      "num_examples": 10000,
+      "dataset_name": "math_dataset"
+    }
+  },
+  "supervised_keys": {
+    "input": "question",
+    "output": "answer"
+  },
+  "version": {
+    "version_str": "1.0.0",
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}
